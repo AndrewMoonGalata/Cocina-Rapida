@@ -1,7 +1,8 @@
 <template>
     <div class="card" style="width: 18rem;">
-  <img v-bind:src="url" class="card-img-top" alt="...">
+ 
   <div class="card-body">
+    <imagenes> <img v-bind:src="url" alt="..."></imagenes>
     <h5 class="card-title">{{nombre}}</h5>
     <p class="card-text">{{descripcion}}</p>
 
@@ -12,6 +13,7 @@
 </template>
 
 <script>
+    import imagenes from "./Imagenes.vue"
     
         export default{
         props: {
@@ -28,6 +30,10 @@
                 Number
             },
         },
+        components:{
+            imagenes
+        }
         
     }
+
     </script>
